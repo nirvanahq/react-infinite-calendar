@@ -5,7 +5,6 @@ import '../../styles.css';
 import './demo.css';
 
 render(
-  <InfiniteCalendar
-    width={Math.min(window.innerWidth, 400)}
-  />
-, document.querySelector('#demo'));
+  <InfiniteCalendar width={Math.min(window.innerWidth, 400)} height={500} />,
+  document.querySelector('#demo')
+);

@@ -1,8 +1,9 @@
-@import "../variables";
+@import '../variables';
 
 .root {
   position: relative;
-  display: table;
+  display: flex;
+  flex-direction: column;
   z-index: 1;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
@@ -12,13 +13,17 @@
   outline: none;
   text-align: left;
 
-  &.landscape {
+  .wrapper {
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &.landscape {
     flex-direction: row;
 
     .wrapper {
       position: relative;
-      flex-grow: 1;
       overflow: hidden;
       z-index: 1;
       border-top-right-radius: $borderRadius;
@@ -28,6 +33,9 @@
 }
 .listWrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  background-color: #FFF;
+  background-color: #fff;
+  flex-grow: 1;
 }
